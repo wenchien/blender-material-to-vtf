@@ -130,6 +130,7 @@ To get started, download the .zip file from the release page
 - [ ] Support for different types of shaders
     - [ ] Diffuse BSDF
     - [ ] Mix Shader
+- [ ] Automatic exporting Normal maps
 - [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it
 - [ ] Allow custom .VMT parameters
 - [ ] Additional support for format and alpha format
