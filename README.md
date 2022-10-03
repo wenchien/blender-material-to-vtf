@@ -124,13 +124,14 @@ To get started, download the .zip file from the release page
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] version 1.0.0 code clean-ups
+- [ ] Version 1.0.0 code clean-ups
 - [ ] GUI label alignment and adjustments
 - [ ] Support for different types of shaders
     - [ ] Diffuse BSDF
     - [ ] Mix Shader
 - [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it
 - [ ] Allow custom .VMT parameters
+- [ ] Additional support for format and alpha format
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
