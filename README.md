@@ -129,7 +129,8 @@ To get started, download the .zip file from the release page
 - [ ] Support for different types of shaders
     - [ ] Diffuse BSDF
     - [ ] Mix Shader
-- [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it 
+- [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it
+- [ ] Allow custom .VMT parameters
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
