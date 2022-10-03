@@ -75,7 +75,7 @@ To get started, download the .zip file from the release page
   <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/isntallation_1.PNG">
 </p>
 
-4. Now, go to your side panel **"Scene"** and scroll to **"VTFLibCmdConverter"** section. You should have something like the following:
+4. Now, go to your side panel **"Scene"** and scroll to **"VTFLibConverter"** section. You should have something like the following:
 
 <p align="center">
   <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/installation_2.PNG">
