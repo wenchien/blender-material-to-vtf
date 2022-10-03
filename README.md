@@ -35,7 +35,7 @@
 
 Blender Source Tools allows Blender to import and export Studiomdl Data and DMX model files. However, in order to streamline the process of material exporting, .QC compilation and HLMV previewing, it's not exactly convenient especially the material exporting part.
 
-I don't want to click through VTFEdit or any other VTF editing software anymore. I want an add-on with simple GUI that quickly export materials in batch. This is my first blender add-on that tackles this problem.
+I don't want to click through VTFEdit or any other VTF editing software anymore. I want an add-on with simple GUI that quickly export materials in batch. This is my first blender add-on that tackles this problem. You can say this is pretty much a Blender GUI for VTFLib
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
