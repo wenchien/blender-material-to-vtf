@@ -126,6 +126,7 @@ To get started, download the .zip file from the release page
 
 - [ ] Version 1.0.0 code clean-ups
 - [ ] GUI label alignment and adjustments
+- [ ] Capture STDOUT and STDERR
 - [ ] Support for different types of shaders
     - [ ] Diffuse BSDF
     - [ ] Mix Shader
