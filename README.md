@@ -92,7 +92,7 @@ To get started, download the .zip file from the release page
 ## Usage
 
 1. Follow the installation and setup guide from the previous section
-2. Make sure you all materials have the following node setup: As of right now, only "Principled BSDF" is supported
+2. Make sure all your materials have the following node setup: As of right now, only "Principled BSDF" is supported
 
 <p align="center">
   <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/node_setup.PNG">
