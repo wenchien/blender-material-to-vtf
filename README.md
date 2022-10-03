@@ -74,25 +74,50 @@ To get started, download the .zip file from the release page
 3. Enable it. You should have something similar to the following:
 
 <p align="center">
-  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/installation_1.PNG">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/isntallation_1.PNG">
 </p>
 
 4. Now, go to your side panel **"Scene"** and scroll to **"VTFLibCmdConverter"** section. You should have something like the following:
 
 <p align="center">
-  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/installation_3.PNG">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/installation_2.PNG">
 </p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+5. Under **VTFCmd Path**, enter the path to ![VTFCmd.exe](https://github.com/NeilJed/VTFLib). Note: This textfield cannot be empty
+6. Under *Material Output Path*, enter the path to your materials folder (i.e _game-full-name_\ _game-folder_\ _materials_). Note: it must be materials folder and this textfield cannot be empty
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Follow the installation and setup guide from the previous section
+2. Make sure you all materials have the following node setup: As of right now, only "Principled BSDF" is supported
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<p align="center">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/node_setup.PNG">
+</p>
+
+3. When you're ready to export your materials, click on the *Refresh Material List* first. By default, all materials will be selected for exporting (indicated by highlight). You may manually deselect the materials that you wish to ignore for exporting. The example below will only export the material **Material.001**
+
+<p align="center">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/example_1.PNG">
+</p>
+
+4. After that, choose your format, alpha format and vtf version by using the dropdown menus
+5. If the **Resize?** checkbox is ticked, values in the following dropdown menus will be used for exporting:
+
+<p align="center">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/example_2.PNG">
+</p>
+
+6. If you wish to generate corresponding .VMT file, tick the **Generate .VMT** checkbox and select your desired _shader_. Note: the VMT will be generated and placed under your materials folder that you've selected earlier
+
+<p align="center">
+  <img src="https://github.com/wenchien/blender-material-to-vtf/blob/master/images/example_3.PNG">
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,15 +126,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [ ] version 1.0.0 code clean-ups
+- [ ] GUI label alignment and adjustments
+- [ ] Support for different types of shaders
+    - [ ] Diffuse BSDF
+    - [ ] Mix Shader
+- [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,12 +143,11 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -139,36 +160,6 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
