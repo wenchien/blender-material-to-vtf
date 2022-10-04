@@ -128,6 +128,7 @@ To get started, download the .zip file from the release page
 - [ ] GUI label alignment and adjustments
 - [ ] Capture STDOUT and STDERR
 - [ ] Support for relative path for both _VTFCMD Path_ and _Material Output Path_
+- [ ] Support for custom resize resolution (i.e. w=256 & l=512) instead of fixed values
 - [ ] Support for different types of shaders
     - [ ] Diffuse BSDF
     - [ ] Mix Shader
