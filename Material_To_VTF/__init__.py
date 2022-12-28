@@ -1,7 +1,7 @@
 bl_info = {
     'name': 'Materials_To_VTF',
     'category': 'All',
-    'version': (1, 0, 0),
+    'version': (1, 1, 0),
     'blender': (2, 93, 5)
 }
 

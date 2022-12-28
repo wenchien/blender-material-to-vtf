@@ -1,6 +1,5 @@
 import bpy
 from . import VTFLibOperators as vtf_operator
-from bpy.props import BoolVectorProperty
 from bpy.props import (StringProperty,
                        BoolProperty,
                        IntProperty,
@@ -8,11 +7,7 @@ from bpy.props import (StringProperty,
                        CollectionProperty,
                        EnumProperty
                        )
-from bpy.types import (Panel,
-                       Operator,
-                       AddonPreferences,
-                       PropertyGroup,
-                       )
+from bpy.types import (PropertyGroup)
 
 # ------------------------------------------------------------------------
 #     Property classes
@@ -31,20 +26,16 @@ class UI_Settings(PropertyGroup):
         maxlen=1024,
         subtype='DIR_PATH')
 
-# ------------------------------------------------------------------------
-#     GUI
-# ------------------------------------------------------------------------
-
+# GUI Utility
 class VTF_UIList(bpy.types.UIList):
     def draw_item(self, context, layout, data, item, icon, active_data, active_propname, index):
-        #split = layout.split(factor=0.5)
         layout.prop(item, "material_checkbox", text=item.material_name, icon='MATERIAL_DATA')
 
     def invoke(self, context, event):
         pass
 
 
-# Main
+# GUI Main
 class VTFLibConverter(bpy.types.Panel):
     """Creates a Panel for streamlining material to vtf process in the scene context of the properties editor"""
     bl_label = "VTFLibConverter"
@@ -71,12 +62,12 @@ class VTFLibConverter(bpy.types.Panel):
 
         # VTFCMD Path textbox
         row = layout.row()
-        row.label(text="VTFCmd Path: ")
+        row.label(text="VTFCmd Path *: ")
         row = layout.row()
         row.prop(scene.VTFLibCmd, "path")
 
         row = layout.row()
-        row.label(text="Material Ouptut Path:")
+        row.label(text="Material Ouptut Path *:")
         row = layout.row()
         row.prop(scene.material_path, "path")
 
@@ -111,6 +102,14 @@ class VTFLibConverter(bpy.types.Panel):
         row = layout.row(align=True)
         row.prop(scene, "vmt_shader_op")
 
+        row = layout.row(align=True)
+        row.prop(scene, "vmt_param_additive", text="Additive?")
+        row.prop(scene, "vmt_param_translucent", text="Translucent?")
+        
+        row = layout.row(align=True)
+        row.prop(scene, "vmt_param_nocull", text="No Cull?")
+
+        # Convert button
         row = layout.row()
         row.operator("object.vtf_operator")
 
@@ -128,12 +127,14 @@ def register():
     for cls in classes:
         bpy.utils.register_class(cls)
     bpy.types.Scene.mats_collection = CollectionProperty(type=Material_List)
-    #bpy.types.Scene.mats_collection_ptr = PointerProperty(type=Material_List)
     bpy.types.Scene.mats_index = IntProperty()
     bpy.types.Scene.VTFLibCmd = PointerProperty(type=UI_Settings)
     bpy.types.Scene.material_path = PointerProperty(type=UI_Settings)
     bpy.types.Scene.resize_bool = BoolProperty(name="")
     bpy.types.Scene.vmt_shader_bool = BoolProperty(name="")
+    bpy.types.Scene.vmt_param_additive = BoolProperty(default=False)
+    bpy.types.Scene.vmt_param_translucent = BoolProperty(default=False)
+    bpy.types.Scene.vmt_param_nocull = BoolProperty(default=False)
 
     bpy.types.Scene.clamp_op = EnumProperty(
         name="Clamp: ",
@@ -212,7 +213,6 @@ def unregister():
         bpy.utils.unregister_class(cls)
     del bpy.types.Scene.VTFLibCmd
     del bpy.types.Scene.mats_collection
-    #del bpy.types.Scene.mats_collection_ptr
     del bpy.types.Scene.mats_index
     del bpy.types.Scene.material_path
     del bpy.types.Scene.resize_bool
@@ -224,5 +224,8 @@ def unregister():
     del bpy.types.Scene.format_op
     del bpy.types.Scene.vmt_shader_bool
     del bpy.types.Scene.vmt_shader_op
+    del bpy.types.Scene.vmt_param_additive
+    del bpy.types.Scene.vmt_param_translucent
+    del bpy.types.Scene.vmt_param_nocull
 
 
