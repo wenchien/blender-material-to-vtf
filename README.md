@@ -125,7 +125,8 @@ To get started, download the .zip file from the release page
 ## Roadmap
 
 - [ ] Version 1.0.0 code clean-ups
-- [ ] GUI label alignment and adjustments
+- [x] Minor code clean-ups
+- [x] GUI label alignment and adjustments
 - [ ] Capture STDOUT and STDERR
 - [ ] Support for relative path for both _VTFCMD Path_ and _Material Output Path_
 - [ ] Support for custom resize resolution (i.e. w=256 & l=512) instead of fixed values
@@ -134,8 +135,9 @@ To get started, download the .zip file from the release page
     - [ ] Mix Shader
 - [ ] Automatic exporting Normal maps
 - [ ] Automatic baking if a material has a shader but without TEX_IMAGE (Pure color) and export it
+- [x] Allow .VMT parameters (More to come!)
 - [ ] Allow custom .VMT parameters
-- [ ] Additional support for format and alpha format
+- [ ] Additional supports for different formats and alpha formats
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
