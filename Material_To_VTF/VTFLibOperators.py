@@ -122,7 +122,7 @@ class vtf_operator(bpy.types.Operator):
         else:
             self.report({'INFO'}, "Starting material vtf conversion process...")
             command_line = list()
-            command_line.append(VTFLibCmdFilePath)
+            command_line.append("\"" + VTFLibCmdFilePath + "\"")
             
             # Get all materials and add to a args list
             # Requires cleanup later
